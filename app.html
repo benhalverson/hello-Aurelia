@@ -1,4 +1,5 @@
 <template>
+  <div>You have ${movies.length} movies</div>
   <table>
     <tr>
       <th>Title</th>
@@ -6,7 +7,7 @@
     </tr>
     <tr repeat.for="movie of movies">
       <td>${movie.title}</td>
-      <td>${movie.year}</td>
+      <td>${movie.releaseYear}</td>
   </table>
   <compose view-model="currentdate"></compose>
 </template>
