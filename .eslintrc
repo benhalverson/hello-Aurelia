@@ -1,4 +1,5 @@
 {
     "esnext": true,
-    "requirePaddingNewLinesAfterBlocks": false
+    "requirePaddingNewLinesAfterBlocks": false,
+    "modules": true
 }
