@@ -10,7 +10,7 @@ export class App {
     return this.http.get("/movies.json")
                     .then(response => {
                       this.movies = response.content;
-                    })
+                    });
   }
   changeMessage() {
     this.message = "Goodbye";
