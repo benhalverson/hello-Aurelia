@@ -6,19 +6,15 @@
           Movies!
         </a>
       </div>
+        <ul class="nav navbar-nav">
+          <li repeat.for="row of router.navigation">
+            <a href.bind="row.href" class="${row.isActive ? 'active' : ''}">${row.title}</a>
+          </li>
+        </ul>
     </div>
   </nav>
-  <div>You have ${movies.length} movies</div>
-  <div class="container">
-    <table class="table">
-      <tr>
-        <th>Title</th>
-        <th>Year</th>
-      </tr>
-      <tr repeat.for="movie of movies">
-        <td>${movie.title}</td>
-        <td>${movie.releaseYear}</td>
-    </table>
-  </div>
-  <compose view-model="currentdate"></compose>
+<div class="container" show.bind="router.isNavigating">
+  <i class="fa fa-spinner fa-spin"></i>
+</div>
+  <router-view></router-view>
 </template>

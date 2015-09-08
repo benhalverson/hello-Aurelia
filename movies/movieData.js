@@ -10,10 +10,16 @@ export class MovieData {
     this.http = httpClient;
   }
 
+  getById(id) {
+    return this.http.get(`${baseUrl}/${id}`)
+      .then(response => response.content);
+  }
+
   getAll() {
     return this.http.get(baseUrl)
       .then(response => {
         return response.content;
       });
   }
+
 }

@@ -1,5 +1,10 @@
 {
     "esnext": true,
     "requirePaddingNewLinesAfterBlocks": false,
-    "modules": true
+    "modules": true,
+    "no-comma-dangle": 0,
+    "env":{
+            "es6": true
+        }
+
 }
