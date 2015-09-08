@@ -16,4 +16,9 @@ export class MovieData {
         return response.content;
       });
   }
+
+  getById(id) {
+    return this.http.get(`${baseUrl}/${id}`)
+      .then(response => response.content);
+  }
 }
